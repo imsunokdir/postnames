@@ -128,7 +128,7 @@ const ResultPostnames = () => {
               </motion.div>
             </>
           ) : (
-            <p>Couldn't find the postal data you're looking for</p>
+            <p>No matching pincodes were found</p>
           )}
         </>
       )}
