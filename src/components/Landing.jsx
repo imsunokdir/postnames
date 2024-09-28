@@ -1,33 +1,29 @@
 import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+
 import { useNavigate } from "react-router-dom";
-import { pincodeAction } from "../store/pincode";
+
 import { motion } from "framer-motion";
 import "../App.css";
 
 const Landing = () => {
   const navigate = useNavigate();
   const [error, setError] = useState(null);
-  const pincode = useSelector((state) => state.pincode);
-  const dispatch = useDispatch();
-
-  //session variables
+  const [pincode, setPincode] = useState("");
 
   //function for input change
   const handleChange = (e) => {
-    dispatch(pincodeAction.changePincode(e.target.value));
+    setPincode(e.target.value);
   };
 
-  //   function to handle form submit
+  //function to handle form submit
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (pincode.length != 6) {
       setError("Pincode must be 6 digits");
       return;
     }
-    sessionStorage.setItem("pincode", pincode);
     setError(null);
-    navigate("/result");
+    navigate(`/result/${pincode}`);
   };
 
   return (
@@ -37,7 +33,6 @@ const Landing = () => {
       transition={{ duration: 1 }}
       className="landing"
     >
-      {/* <div className="landing"> */}
       <h1>Pincode Lookup</h1>
       <form onSubmit={handleSubmit}>
         <div className="pincode-input-div">
@@ -55,7 +50,6 @@ const Landing = () => {
           <p className="pin-validate">pincode should be of length 6</p>
         </div>
       )}
-      {/* </div> */}
     </motion.div>
   );
 };

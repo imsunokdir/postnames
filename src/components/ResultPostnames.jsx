@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
 import Loading from "./Loading";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const ResultPostnames = () => {
@@ -16,7 +15,7 @@ const ResultPostnames = () => {
 
   const [loading, setLoading] = useState(true);
 
-  const pincode = sessionStorage.getItem("pincode");
+  const { pincode } = useParams();
 
   const handleFilter = (e) => {
     const searchValue = e.target.value.toLowerCase();

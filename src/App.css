@@ -16,7 +16,6 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 100px;
     background-color: rgba(40, 130, 138, 0.155);
     width: 100%;
 }
