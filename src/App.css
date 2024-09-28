@@ -1,0 +1,193 @@
+body{
+    margin: 0;
+
+ }
+ 
+ #root{
+     /* background-color: gray; */
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100%;
+ }
+ .landing{
+    padding: 5px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    background-color: rgba(40, 130, 138, 0.155);
+    width: 100%;
+}
+
+.card{
+    padding:10px;
+    background-color: rgba(79, 225, 16, 0.295);
+    border-radius: 10px;
+}
+
+
+
+.result{
+    padding: 10px;
+    width:100%;
+    background-color: rgba(34, 166, 223, 0.168);
+    min-height: 100vh;
+}
+
+.filter{
+    width: 400px;
+    height: 30px;
+    font-size: 18px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.postnames{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+    gap:10px;
+    margin-top: 10px;
+}
+
+@media screen and (min-width: 1200px) {
+    .postnames {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  @media screen and (min-width: 1024px) and (max-width: 1199px) {
+    .postnames {
+      grid-template-columns: repeat(3, 1fr); 
+    }
+  }
+
+
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .postnames {
+      grid-template-columns: repeat(2, 1fr); 
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .postnames {
+      grid-template-columns: repeat(1, 1fr); /* 1 column */
+    }
+  }
+
+
+
+
+.pincode-input-div{
+    /* background-color: red; */
+    width:500px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    gap:5px;
+}
+
+.pincode-input-div input{
+    /* height: 100%; */
+    padding: 0;
+    margin: 0;
+    width: 250px;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 3px;
+}
+
+.pincode-input-div button{
+    /* height: 100%; */
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(86, 142, 221);
+    color: whitesmoke;
+    transition: transform 0.2s ease-in-out;
+}
+
+.pincode-input-div button:hover{
+    cursor: pointer;
+    transform: scale(1.08);
+    box-shadow: 3px 3px 5px grey;
+}
+
+.spinner{
+    background-color: rgba(216, 208, 208, 0.688);
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner img{
+    height: 200px;
+    width: 200px;
+}
+
+.error{
+    background-color: rgba(110, 18, 18, 0.279);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    /* padding: 10px; */
+}
+
+.error-message{
+    background-color: rgb(237, 111, 20);
+    width: 500px;
+    height: 150px;
+    margin-top: 100px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.error-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px
+}
+.error-btns{
+    border: none;
+    height: 40px;
+    width:80px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgb(211, 211, 8);
+    transition: transform 0.1s ease-in-out;
+    color: rgb(29, 59, 135);
+
+}
+
+.error-btns:hover{
+    transform: scale(1.1);
+    box-shadow: 3px 3px 20px rgb(85, 7, 7);
+    background-color: rgba(255, 255, 0, 0.659);
+}
+
+.pin-validate{
+    color: white;
+    background-color: rgba(195, 27, 27, 0.984);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.pincode-text{
+    font-size: 20px;
+}
+
+.message{
+    font-size: 17px;
+    font-weight: bold;
+}
