@@ -1,8 +1,36 @@
-# React + Vite
+# Pincode Lookup App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web application that allows users to look up details associated with Indian postal codes using the Indian Postal Pincode API. The app provides an intuitive interface to enter a 6-digit postal code and fetches relevant details.
 
-Currently, two official plugins are available:
+## Features
+- Input field to enter a 6-digit Indian Postal Code.
+- "Lookup" button to fetch details from the API.
+- Displays the following details:
+  - Post office name
+  - Pincode
+  - District
+  - State
+- Real-time filtering of post office names based on user input.
+- Loader displayed while fetching data from the API.
+- Error handling for invalid input and API response errors.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## How It Works
+1. Enter a 6-digit postal code in the input field.
+2. Click the **Lookup** button to fetch the corresponding data.
+3. If the input is valid, the app makes a GET request to the API to retrieve details.
+4. The fetched details are displayed on the page.
+5. The user can filter the displayed results by typing in the filter input field.
+
+### Error Handling
+- Displays an alert if the entered postal code is not 6 digits.
+- Shows error messages for any API response errors.
+- Notifies the user if no postal data matches the filter criteria.
+
+## Demo
+[Check out the live app here!](https://postnames-git-main-imsunokdirs-projects.vercel.app/)
+
+## Built With
+- **HTML** for structure.
+- **CSS** for styling.
+- **JavaScript** for functionality and API interactions.
+
